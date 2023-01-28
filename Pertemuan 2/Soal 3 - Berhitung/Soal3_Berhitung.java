@@ -23,28 +23,28 @@ public class Soal3_Berhitung {
 		int B = Keyboard.nextInt();
 	
 		//Jika input A atau B lebih dari 1000 maka akan muncul output Inputan angka melebihi batas
-		if ((A>=1 && A <= 1000) || (B>=1 && B <= 1000)) {
-			System.out.println("Inputan angka melebihi batas");
-		}
-		
+		if (((A >= 1) && (A <= 1000)) && ((B>=1) && (B <= 1000))) {
 		//Menampilkan hasil operasi dari A dan B sesuai kondisi operator.
-		if (operator == '+') {
-			System.out.println(A + B);
-		}
-		else if (operator == '-') {
-			System.out.println(A - B);
-		}
-		else if (operator == '*') {
-			System.out.println(A * B);
-		}
-		else if (operator == '/') {
-			System.out.println(A / B);
-		}
-		else if (operator == '%'){
-			System.out.println(A % B);
-		}
-		else {
-			System.out.println("Operator tidak valid!");
+			if (operator == '+') {
+				System.out.println(A + B);
+			}
+			else if (operator == '-') {
+				System.out.println(A - B);
+			}
+			else if (operator == '*') {
+				System.out.println(A * B);
+			}
+			else if (operator == '/') {
+				System.out.println(A / B);
+			}
+			else if (operator == '%'){
+				System.out.println(A % B);
+			}
+			else {
+				System.out.println("Operator tidak valid!");
+			}
+		}else {
+			System.out.println("Inputan angka melebihi batas");
 		}
 		//Menutup scanner
 		Keyboard.close();
