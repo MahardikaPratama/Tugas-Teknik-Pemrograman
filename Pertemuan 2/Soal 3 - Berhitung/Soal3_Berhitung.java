@@ -23,7 +23,7 @@ public class Soal3_Berhitung {
 		int B = Keyboard.nextInt();
 	
 		//Jika input A atau B lebih dari 1000 maka akan muncul output Inputan angka melebihi batas
-		if ((A<1 && A > 1000) || (B<1 && B > 1000)) {
+		if ((A>=1 && A <= 1000) || (B>=1 && B <= 1000)) {
 			System.out.println("Inputan angka melebihi batas");
 		}
 		
