@@ -2,7 +2,8 @@ import java.util.Scanner;
 
 /**
 *Program akan mengambil sebuah input angka pertama , operator, dan angka kedua masing-masing dipisahkan spasi.
-*Angka yang dimasukkan tidak boleh lebih dari 1000.
+*Angka yang dimasukkan tidak boleh lebih dari 1000 dan harus lebih dari 0.
+*Jika operatornya pembagian "/" maka dijamin A habis dibagi B.
 *Output pada program adalah hasil operasi dari kedua angka.
 *
 *@author Mahardika Pratama
@@ -35,16 +36,22 @@ public class Soal3_Berhitung {
 				System.out.println(A * B);
 			}
 			else if (operator == '/') {
+				if(A % B ==0) {
 				System.out.println(A / B);
+				}else { //Karena a tidak habis dibagi B maka akan muncul output seperti berikut
+					System.out.println(A + " tidak habis dibagi " + B);
+					System.out.print("karena hasilnya pembagiannya adalah ");
+					System.out.printf("%.2f", (float) A / B);
+				}
 			}
 			else if (operator == '%'){
 				System.out.println(A % B);
 			}
-			else {
+			else { //Jika input operatornya tidak seperti ketentuan, program akan menampilkan bahwa operator tidak valid
 				System.out.println("Operator tidak valid!");
 			}
-		}else {
-			System.out.println("Inputan angka melebihi batas");
+		}else { //Jika input angka tidak seperti ketentuan, program akan menampilkan bahwa inputan angka tidak valid
+			System.out.println("Inputan angka tidak valid");
 		}
 		//Menutup scanner
 		Keyboard.close();
