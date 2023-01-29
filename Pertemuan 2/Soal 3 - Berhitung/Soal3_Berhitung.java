@@ -43,7 +43,7 @@ public class Soal3_Berhitung {
 					System.out.println(A / B);
 					}else { //Karena a tidak habis dibagi B maka akan muncul output seperti berikut
 						System.out.println(A + " tidak habis dibagi " + B);
-						System.out.print("karena hasilnya pembagiannya adalah ");
+						System.out.print("karena hasil pembagiannya adalah ");
 						System.out.printf("%.2f", (float) A / B);
 					}
 				}
