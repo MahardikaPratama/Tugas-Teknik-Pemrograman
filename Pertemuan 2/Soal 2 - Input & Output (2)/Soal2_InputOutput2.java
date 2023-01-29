@@ -25,7 +25,10 @@ public class Soal2_InputOutput2 {
 			s[i] = input.next();
 			x[i] = input.nextInt();
 		}
-		System.out.println("================================");
+		for (int i = 0; i<29; i++) {
+			System.out.print("=");
+		}
+		System.out.println();
 		/*Menampilkan variael s yang diformat menggunakan %-15s dan variabel x yang diformat dengan %03d
 		 * %-15s artinya adalah mengisi string sepanjang 15 karakter dan menambahkan spasi jika string yang input kurang dari 15 karakter, 
 		 * %-03d artinya adalah menampilkan bilangan sebanyak 3 digit dan jika input yang diberikan kurang dari 3 digit,
@@ -35,7 +38,10 @@ public class Soal2_InputOutput2 {
 		for (int i=0; i<3; i++) {
 			System.out.printf("%-15s%03d\n",s[i],x[i]);
 		}
-		System.out.println("================================");
+		for (int i = 0; i<29; i++) {
+			System.out.print("=");
+		}
+		System.out.println();
 		//Menutup scanner
 		input.close();
 	}
