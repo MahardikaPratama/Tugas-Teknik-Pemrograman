@@ -20,6 +20,7 @@ public class Soal4_GajiAgent {
 			int gajiPokok = 500000;
 			int hargaItem = 50000;
 			
+			System.out.println("Masukkan jumlah penjualan : ");
 			//Menggunakan scanner untuk mengambil input total penjualan
 			int totalPenjualan = input.nextInt();
 			
@@ -38,6 +39,9 @@ public class Soal4_GajiAgent {
 			}
 			//Menampilkan gajikPokok akhir
 			System.out.println(gajiPokok);
+			System.out.println("Ketik y jika ingin mencoba perhitungan yang lain");
+			lagi = input.next().charAt(0);
+			System.out.println();
 		}
 		//Menutup scanner
 		input.close();
