@@ -24,7 +24,7 @@ public class Soal5_BukaTutupJalan {
 		//Alasannya adalah karena type data long memiliki panjang digit 19 dan string plat nomer diatas berjumlah 16 digit.
 		long gabungan = Long.parseLong(platNomer);
 		//Manampilkan perintah pada 4 mobil sesuai perhitungan plat nomor yang digabung di bagi 5
-		if (gabungan % 5 == 0) {
+		if ((gabungan -999999) % 5 == 0) {
 			System.out.println("berhenti");
 		}
 		else {
