@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 /**
 *Program akan mengambil input plat nomor 4 mobil. Jika setiap 4 mobil yang lewat digabung angkanya,
-*kemudian hasil gabungannya di kurang 999999 dan dibagi 5, sisa hasil baginya adalah 0, maka 4 mobil tersebut harus berhenti. Jika bukan 0 maka 4 mobil itu jalan.
+*kemudian hasil gabungannya di kurang 999999 dan dibagi 5, sisa hasil baginya adalah 0, maka outputnya adalah jalan. Jika bukan 0 maka berhenti.
 *@author Mahardika Pratama
 *@since 26-01-2023
 */
