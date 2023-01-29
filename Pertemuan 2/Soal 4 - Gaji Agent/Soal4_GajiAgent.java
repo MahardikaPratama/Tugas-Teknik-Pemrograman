@@ -15,28 +15,30 @@ public class Soal4_GajiAgent {
 	public static void main(String[] args) {
 		//Membuat scanner
 		Scanner input = new Scanner (System.in);
-		
-		int gajiPokok = 500000;
-		int hargaItem = 50000;
-		
-		//Menggunakan scanner untuk mengambil input total penjualan
-		int totalPenjualan = input.nextInt();
-		
-		//Perhitungan gajiPokok sesuai banyaknya total penjualan
-		if(totalPenjualan > 80) {
-			gajiPokok += hargaItem * totalPenjualan * 35 / 100;
+		char lagi = 'y';
+		while (lagi == 'y') {
+			int gajiPokok = 500000;
+			int hargaItem = 50000;
+			
+			//Menggunakan scanner untuk mengambil input total penjualan
+			int totalPenjualan = input.nextInt();
+			
+			//Perhitungan gajiPokok sesuai banyaknya total penjualan
+			if(totalPenjualan > 80) {
+				gajiPokok += hargaItem * totalPenjualan * 35 / 100;
+			}
+			else if(totalPenjualan >= 40) {
+				gajiPokok += hargaItem * totalPenjualan * 25 / 100;
+			}
+			else if(totalPenjualan < 15) {
+				gajiPokok -= ((15-totalPenjualan)*hargaItem) * 15 / 100;
+			}
+			else {
+				gajiPokok += hargaItem * totalPenjualan * 10 / 100;
+			}
+			//Menampilkan gajikPokok akhir
+			System.out.println(gajiPokok);
 		}
-		else if(totalPenjualan >= 40) {
-			gajiPokok += hargaItem * totalPenjualan * 25 / 100;
-		}
-		else if(totalPenjualan < 15) {
-			gajiPokok -= ((15-totalPenjualan)*hargaItem) * 15 / 100;
-		}
-		else {
-			gajiPokok += hargaItem * totalPenjualan * 10 / 100;
-		}
-		//Menampilkan gajikPokok akhir
-		System.out.println(gajiPokok);
 		//Menutup scanner
 		input.close();
 	}
