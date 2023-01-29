@@ -25,10 +25,10 @@ public class Soal5_BukaTutupJalan {
 		long gabungan = Long.parseLong(platNomer);
 		//Manampilkan perintah pada 4 mobil sesuai perhitungan gabungan plat nomor dikurang 999999 di bagi 5
 		if ((gabungan -999999) % 5 == 0) {
-			System.out.println("berhenti");
+			System.out.println("jalan");
 		}
 		else {
-			System.out.println("jalan");
+			System.out.println("berhenti");
 		}
 		//Menutup scanner
 		input.close();
