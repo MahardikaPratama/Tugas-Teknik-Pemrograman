@@ -30,28 +30,35 @@ public class PemesananMain {
 		mp.tambahMenuMakanan("Permen", 5_00, 100);
 		
 		Scanner input = new Scanner(System.in);
-		char lagi;
-		char konfirmasi = 'y';
-		String nama_pesanan;
-		int jumlah;
-		
-		while (konfirmasi == 'y') {
-			mp.tampilMenuMakanan();
-			lagi = 'y';
-			while(lagi == 'y') {
-				System.out.println("Makanan yang dipesan : ");
-				nama_pesanan = input.next();
-				System.out.println("Jumlah yang dipesan : ");
-				jumlah = input.nextInt();
-				mp.pesanMakanan(nama_pesanan, jumlah);
-				System.out.println("pesan lagi?(tekan y) Jika tidak lanjut proses pembayaran");
-				lagi = input.next().charAt(0);
+		int opsi=0;
+		do {
+			mp.tampilMenuUtama();
+			opsi = input.nextInt();
+			switch (opsi) {
+				case 1 : 
+					mp.pesanMakanan();
+					break;
+				case 2 : 
+					mp.tampilPesanan();
+					break;
+				case 3 : 
+					mp.hapusPesanan();
+					break;
+				case 4 :
+					mp.tampilMenuMakanan();
+					break;
+				case 5 :
+					mp.pembayaran();
+					break;
+				case 6 :
+					System.out.println("Keluar Program");
+					return;
+				default : 
+					System.out.println("Input tidak valid");
+					break;
 			}
-			mp.countTotalHarga();
-			mp.pembayaran();
-			System.out.println("Ingin kembai ke toko gak ?(tekan y)");
-			konfirmasi = input.next().charAt(0);
-		}
+	
+		}while(opsi != 6);
 		input.close();
 	}
 
